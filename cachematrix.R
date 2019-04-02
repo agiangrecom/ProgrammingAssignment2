@@ -1,3 +1,6 @@
+
+#Creates the matrix object that can be cached
+
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -11,6 +14,8 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
+
+#Creates the inverse of the matrix and puts that into the cached environment
 
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
